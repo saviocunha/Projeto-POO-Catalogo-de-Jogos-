@@ -2,12 +2,12 @@
 ------------------------------------------------------------------------
 ## 🧩 Visão Geral
 O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamento de um catálogo pessoal de jogos digitais, permitindo o cadastro, acompanhamento de progresso, organização por categorias e geração de relatórios estatísticos
-🎯 Objetivos
-Aplicar conceitos fundamentais de POO na prática.
-Modelar um sistema utilizando classes, atributos e métodos.
-Utilizar herança simples e múltipla de forma adequada.
-Implementar regras de negócio que garantam a consistência dos dados.
-Organizar o projeto para entrega via repositório GitHub.
+## Objetivos
+-   Aplicar conceitos fundamentais de POO na prática.
+-   Modelar um sistema utilizando classes, atributos e métodos.
+-   Utilizar herança simples e múltipla de forma adequada.
+-   Implementar regras de negócio que garantam a consistência dos dados.
+-   Organizar o projeto para entrega via repositório GitHub.
 
 ------------------------------------------------------------------------
 ## 🧩 Conceitos de POO Aplicados
