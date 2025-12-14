@@ -4,6 +4,16 @@
 O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamento de um catálogo pessoal de jogos digitais, permitindo o cadastro, acompanhamento de progresso, organização por categorias e geração de relatórios estatísticos
 
 ------------------------------------------------------------------------
+## 🧩 Conceitos de POO Aplicados
+-   Encapsulamento: atributos sensíveis são acessados apenas por métodos controlados.
+
+-   Herança Simples: especialização da classe Jogo em diferentes plataformas.
+
+-   Herança Múltipla: a classe Jogo herda comportamentos de Avaliável e Temporizável.
+
+-   Polimorfismo: comportamentos específicos de acordo com o tipo de jogo.
+
+-   Métodos Especiais: utilizados para exibição, comparação e organização dos objetos
 
 ## 📝 Principais Classes do Sistema
 1. Jogo 
