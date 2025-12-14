@@ -28,7 +28,9 @@ Classe genérica que representa um jogo digital.
     Representa o usuário do sistema. Um usuário pode possuir um catálogo de jogos e diversas coleções personalizadas.
 
     O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários registrem, acompanhem e analisem seu progresso em jogos digitais, aplicando conceitos de Programação Orientada a Objetos, como encapsulamento, herança simples e múltipla, métodos especiais e regras de negócio configuráveis.
+   
     5.1 Classe Usuário
+   
     Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
 -   Atributos:nome;  tipo_de_jogador (casual, competitivo, hardcore, etc); tempo_total_jogado; lista_de_jogos
 -   Métodos: adicionar_jogo(); remover_jogo(); listar_jogos(); calcular_tempo_total_jogado(); gerar_relatorio_pessoal()
