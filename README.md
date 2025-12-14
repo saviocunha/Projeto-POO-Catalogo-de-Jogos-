@@ -25,7 +25,7 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamen
 
 6. Classes do Sistema
 
-6.1 Classe Usuário
+    6.1 Classe Usuário
     Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
 
 -   Atributos:nome;  tipo_de_jogador (casual, competitivo, hardcore, etc); tempo_total_jogado; lista_de_jogos
