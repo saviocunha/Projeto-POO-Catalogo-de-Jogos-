@@ -28,22 +28,9 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamen
 6.1 Classe Usuário
 Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
 
-####.Atributos:
-nome
-
-tipo_de_jogador (casual, competitivo, hardcore, etc.
-
-tempo_total_jogado
-
-lista_de_jogos
-
-
-####.Métodos: adicionar_jogo()  #### remover_jogo() #### listar_jogos()
-
-calcular_tempo_total_jogado()
-
-gerar_relatorio_pessoal()
-   
+-   Atributos:nome;  tipo_de_jogador (casual, competitivo, hardcore, etc); tempo_total_jogado; lista_de_jogos
+-   
+-   Métodos: adicionar_jogo(); remover_jogo(); listar_jogos(); calcular_tempo_total_jogado(); gerar_relatorio_pessoal()
 7. Classe Relatorio
     Responsável por gerar estatísticas e informações consolidadas do catálogo, como total de horas jogadas, percentual de jogos por status e lista dos jogos mais jogados.
 
