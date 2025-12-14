@@ -8,7 +8,13 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamen
 ## 📝 Principais Classes do Sistema
 1. Jogo 
     Classe base responsável por representar um jogo genérico no catálogo. Contém os atributos e métodos comuns a todos os tipos de jogos, garantindo o encapsulamento e as validações básicas.
-   
+   Classe Jogo (Classe Base)
+
+Classe genérica que representa um jogo digital.
+
+-   Atributos: título; gênero; plataforma status (não iniciado, jogando, finalizado); tempo_jogado; data_inicio; data_fim.
+-   Métodos: iniciar_jogo(); atualizar_tempo(); finalizar_jogo(); reiniciar_jogo(); exibir_detalhes().
+  
 3. Classes JogoPC, JogoConsole e JogoMobile
     Herdam da classe Jogo definindo a plataforma específica e podendo incluir atributos ou métodos próprios de cada plataforma.
    
