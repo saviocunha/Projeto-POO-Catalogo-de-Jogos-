@@ -6,7 +6,6 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamen
 ------------------------------------------------------------------------
 
 ## 📝 Principais Classes do Sistema
-
 1. Jogo 
     Classe base responsável por representar um jogo genérico no catálogo. Contém os atributos e métodos comuns a todos os tipos de jogos, garantindo o encapsulamento e as validações básicas.
    
@@ -21,13 +20,14 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamen
 
 7. Usuário
     Representa o usuário do sistema. Um usuário pode possuir um catálogo de jogos e diversas coleções personalizadas.
- 📝 1. Descrição Geral   ##
 
 O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários registrem, acompanhem e analisem seu progresso em jogos digitais, aplicando conceitos de Programação Orientada a Objetos, como encapsulamento, herança simples e múltipla, métodos especiais e regras de negócio configuráveis.
 
 2. Principais Classes do Sistema
 2.1 Classe Usuário
+   
 📝 1.Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
+
 Atributos:
 nome
 tipo_de_jogador (casual, competitivo, hardcore, etc.
