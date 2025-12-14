@@ -30,15 +30,24 @@ Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
 
 📝 1.Atributos:
 nome
+
 tipo_de_jogador (casual, competitivo, hardcore, etc.
+
 tempo_total_jogado
+
 lista_de_jogos
 
+
 📝 1.1.Métodos:
+
 adicionar_jogo()
+
 remover_jogo()
+
 listar_jogos()
+
 calcular_tempo_total_jogado()
+
 gerar_relatorio_pessoal()
    
 7. Classe Relatorio
