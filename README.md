@@ -15,16 +15,17 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para gerenciamen
 4. Catálogo de Jogos
    Gerencia a coleção principal de jogos. Centralizará as operações de CRUD, filtros (por gênero, plataforma, status), buscas, ordenação e a geração dos relatórios exigidos (total de horas, média de notas, percentuais, top 5, etc). Essa classe também aplica regras importantes, como impedir jogos duplicados (mesmo título e plataforma) e limitar a quantidade de jogos com status “JOGANDO”.
    
-6.  Coleção
+5.  Coleção
     A classe Colecao é responsável por agrupar listas personalizadas de jogos.
 
-7. Usuário
+6. Usuário
     Representa o usuário do sistema. Um usuário pode possuir um catálogo de jogos e diversas coleções personalizadas.
 
-O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários registrem, acompanhem e analisem seu progresso em jogos digitais, aplicando conceitos de Programação Orientada a Objetos, como encapsulamento, herança simples e múltipla, métodos especiais e regras de negócio configuráveis.
+    O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários registrem, acompanhem e analisem seu progresso em jogos digitais, aplicando conceitos de Programação Orientada a Objetos, como encapsulamento, herança simples e múltipla, métodos especiais e regras de negócio configuráveis.
 
-2. Principais Classes do Sistema
-2.1 Classe Usuário
+6. Classes do Sistema
+
+6.1 Classe Usuário
 Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
 
 📝 1.Atributos:
@@ -40,10 +41,10 @@ listar_jogos()
 calcular_tempo_total_jogado()
 gerar_relatorio_pessoal()
    
-9. Classe Relatorio
+7. Classe Relatorio
     Responsável por gerar estatísticas e informações consolidadas do catálogo, como total de horas jogadas, percentual de jogos por status e lista dos jogos mais jogados.
 
-10. Configuracoes
+8. Configuracoes
    Gerenciar as configurações do usuário (meta anual, gêneros favoritos, limite de jogos simultâneos) lidas e salvas no settings.json.
    
 ------------------------------------------------------------------------
