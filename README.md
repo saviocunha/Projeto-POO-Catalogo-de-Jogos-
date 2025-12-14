@@ -25,16 +25,15 @@ O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários r
 
 2. Principais Classes do Sistema
 2.1 Classe Usuário
-   
-📝 1.Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
+Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
 
-Atributos:
+📝 1.Atributos:
 nome
 tipo_de_jogador (casual, competitivo, hardcore, etc.
 tempo_total_jogado
 lista_de_jogos
 
-📝 1.Métodos:
+📝 1.1.Métodos:
 adicionar_jogo()
 remover_jogo()
 listar_jogos()
