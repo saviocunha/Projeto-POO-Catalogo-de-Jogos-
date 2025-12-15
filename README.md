@@ -2,6 +2,7 @@
 ------------------------------------------------------------------------
 ## 🧩 Visão Geral
 O projeto consiste no desenvolvimento, em Python, de um sistema para o gerenciamento de um catálogo pessoal de jogos digitais, permitindo o cadastro, acompanhamento de progresso, organização por categorias e geração de relatórios estatísticos.
+
 O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários registrem, acompanhem e analisem seu progresso em jogos digitais, aplicando conceitos de Programação Orientada a Objetos, como encapsulamento, herança simples e múltipla, métodos especiais e regras de negócio configuráveis.
 
 ## Objetivos
