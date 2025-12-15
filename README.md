@@ -53,10 +53,10 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para o gerenciam
 
 6. Classes do Sistema
 
-8. Classe Relatorio
+7. Classe Relatorio
     Responsável por gerar estatísticas e informações consolidadas do catálogo, como total de horas jogadas, percentual de jogos por status e lista dos jogos mais jogados.
 
-9. Configuracoes
+8. Configuracoes
    Gerenciar as configurações do usuário (meta anual, gêneros favoritos, limite de jogos simultâneos) lidas e salvas no settings.json.
    
 ------------------------------------------------------------------------
