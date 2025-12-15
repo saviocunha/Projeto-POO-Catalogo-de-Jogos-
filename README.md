@@ -36,27 +36,22 @@ O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários r
 2. Classes JogoPC, JogoConsole e JogoMobile: 
      São Classes que herdam da classe Jogo definindo a plataforma específica e podendo incluir atributos ou métodos próprios de cada plataforma.
    
-3. Catálogo de Jogos
-   Gerencia a coleção principal de jogos. Centralizará as operações de CRUD, filtros (por gênero, plataforma, status), buscas, ordenação e a geração dos relatórios exigidos (total de horas, média de notas, percentuais, top 5, etc). Essa classe também aplica regras importantes, como impedir jogos duplicados (mesmo título e plataforma) e limitar a quantidade de jogos com status “JOGANDO”.
+3. Catálogo de Jogos: 
+   É a Gerencia a coleção principal de jogos. Centralizará as operações de CRUD, filtros (por gênero, plataforma, status), buscas, ordenação e a geração dos relatórios exigidos (total de horas, média de notas, percentuais, top 5, etc). Essa classe também aplica regras importantes, como impedir jogos duplicados (mesmo título e plataforma) e limitar a quantidade de jogos com status “JOGANDO”.
    
-4.  Coleção
+4.  Classe Colecao: 
     A classe Colecao é responsável por agrupar listas personalizadas de jogos.
 
-5. Usuário
-    Representa o usuário do sistema. Um usuário pode possuir um catálogo de jogos e diversas coleções personalizadas.
+5. Classe Usuario: 
+    Representa o usuário do sistema. Um usuário pode possuir um catálogo de jogos e gerenciá-lo, além de diversas coleções personalizadas.
 
-    5.1 Classe Usuário
-   
-    Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
 -   Atributos:nome;  tipo_de_jogador (casual, competitivo, hardcore, etc); tempo_total_jogado; lista_de_jogos
 -   Métodos: adicionar_jogo(); remover_jogo(); listar_jogos(); calcular_tempo_total_jogado(); gerar_relatorio_pessoal()
 
-6. Classes do Sistema
-
-7. Classe Relatorio
+6. Classe Relatorio: 
     Responsável por gerar estatísticas e informações consolidadas do catálogo, como total de horas jogadas, percentual de jogos por status e lista dos jogos mais jogados.
 
-8. Configuracoes
+7. Classe Configuracoes: 
    Gerenciar as configurações do usuário (meta anual, gêneros favoritos, limite de jogos simultâneos) lidas e salvas no settings.json.
    
 ------------------------------------------------------------------------
