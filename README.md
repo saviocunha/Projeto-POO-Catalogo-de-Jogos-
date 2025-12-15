@@ -25,11 +25,11 @@ O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários r
 -   Métodos Especiais: utilizados para exibição, comparação e organização dos objetos
 
 ## 📝 Principais Classes do Sistema
-1. Jogo 
+1. Classe Jogo:  
     Classe base responsável por representar um jogo genérico no catálogo. Contém os atributos e métodos comuns a todos os tipos de jogos, garantindo o encapsulamento e as validações básicas.
    Classe Jogo (Classe Base)
 
-    Classe genérica que representa um jogo digital.
+   Classe genérica que representa um jogo digital.
 
 -   Atributos: título; gênero; plataforma status (não iniciado, jogando, finalizado); tempo_jogado; data_inicio; data_fim.
 -   Métodos: iniciar_jogo(); atualizar_tempo(); finalizar_jogo(); reiniciar_jogo(); exibir_detalhes().
