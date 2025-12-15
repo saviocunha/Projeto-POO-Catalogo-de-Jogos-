@@ -2,6 +2,8 @@
 ------------------------------------------------------------------------
 ## 🧩 Visão Geral
 O projeto consiste no desenvolvimento, em Python, de um sistema para o gerenciamento de um catálogo pessoal de jogos digitais, permitindo o cadastro, acompanhamento de progresso, organização por categorias e geração de relatórios estatísticos.
+O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários registrem, acompanhem e analisem seu progresso em jogos digitais, aplicando conceitos de Programação Orientada a Objetos, como encapsulamento, herança simples e múltipla, métodos especiais e regras de negócio configuráveis.
+
 ## Objetivos
 -   Aplicar conceitos fundamentais de POO na prática.
 -   Modelar um sistema utilizando classes, atributos e métodos.
@@ -43,8 +45,6 @@ O projeto consiste no desenvolvimento, em Python, de um sistema para o gerenciam
 5. Usuário
     Representa o usuário do sistema. Um usuário pode possuir um catálogo de jogos e diversas coleções personalizadas.
 
-    O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários registrem, acompanhem e analisem seu progresso em jogos digitais, aplicando conceitos de Programação Orientada a Objetos, como encapsulamento, herança simples e múltipla, métodos especiais e regras de negócio configuráveis.
-   
     5.1 Classe Usuário
    
     Representa a pessoa que utiliza o sistema e gerencia seu catálogo de jogos.
