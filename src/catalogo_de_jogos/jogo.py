@@ -2,7 +2,7 @@
 from enum import Enum
 from datetime import date
 
-class jogo:
+class Jogo:
     def __init__(self, titulo: str, genero:str, plataforma: str):
         self.__titulo = titulo
         self.__genero = genero
@@ -66,18 +66,49 @@ class jogo:
             self.__status = novo_status
         else:
             raise ValueError(f"O status deve ser um valor do tipo StatusJogo. Recebido: {type(novo_status)}")
+    
+    @property
+    def __data_inicio(self):
+        return self.__data_inicio
+    
+    @data_inicio.setter
+    def data_inicio(self, data)
+        self.__data_inicio = data
+    
+    @property
+    def __data_fim(self):
+        return self.__data_fim
+    
+    @data_inicio.setter
+    def data_fim(self, data)
+        self.__data_fim = data
+
+    @property
+    def nota(self):
+        return self.__nota
+    
+    @nota.setter
+    def nota(self, valor):
+        if self.status != StatusJogo.FINALIZADO:
+            raise ValueError('Só é possivel avaliar jogos finalizados! ')
+        if not (0 <= valor <= 10):
+            raise ValueError('Nota deve ser de 0 a 10.')
+        self.__nota = valor
 
 
-class jogo_pc(jogo):
+# Classes Filhas
+class Jogo_pc(Jogo):
     pass
 
-class jogo_console(jogo):
+class Jogo_console(Jogo):
     pass
 
-class jogo_mobile(jogo):
+class Jogo_mobile(Jogo):
     pass
 
 class StatusJogo(Enum):
     NAO_INICIADO = "NÃO INICIADO"
     JOGANDO = "JOGANDO"
     FINALIZADO = "FINALIZADO"
+
+
