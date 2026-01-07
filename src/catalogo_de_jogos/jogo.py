@@ -1,4 +1,3 @@
-
 from enum import Enum
 from datetime import date
 
@@ -16,7 +15,7 @@ class Jogo:
         
 
 
-# Properties - Getters /Setters
+# --------------- Properties - Getters /Setters --------------- 
 
 
     @property
@@ -68,19 +67,19 @@ class Jogo:
             raise ValueError(f"O status deve ser um valor do tipo StatusJogo. Recebido: {type(novo_status)}")
     
     @property
-    def __data_inicio(self):
+    def data_inicio(self):
         return self.__data_inicio
     
     @data_inicio.setter
-    def data_inicio(self, data)
+    def data_inicio(self, data):
         self.__data_inicio = data
     
     @property
-    def __data_fim(self):
+    def data_fim(self):
         return self.__data_fim
     
-    @data_inicio.setter
-    def data_fim(self, data)
+    @data_fim.setter
+    def data_fim(self, data):
         self.__data_fim = data
 
     @property
@@ -96,15 +95,50 @@ class Jogo:
         self.__nota = valor
 
 
-# Classes Filhas
-class Jogo_pc(Jogo):
-    pass
+#  --------------- Regras de Negócio  --------------- 
+    
+    def adicionar_horas(self, horas: float):
+        if horas < 0:
+            raise ValueError('Horas não podem ser negativas.')
+        
+        horas_jogadas += horas_jogadas 
 
-class Jogo_console(Jogo):
-    pass
+        if self.status == StatusJogo.NAO_INICIADO:
+            status = StatusJogo.JOGANDO
+            data_inicio = date.today()
 
-class Jogo_mobile(Jogo):
-    pass
+
+
+
+
+# --------------- Classes Filhas --------------- 
+class JogoPc(Jogo):
+    def __init__(self, titulo, genero, plataforma):
+        super().__init__(titulo, genero, plataforma= 'PC')   
+
+class JogoConsole(Jogo):
+    def __init__(self, titulo, genero, plataforma, nome_console):
+        super().__init__(titulo, genero, plataforma = 'Console')
+        self.__nome_console = nome_console
+    
+
+    @property
+    def nome_console(self):
+        return self.__nome_console
+    
+    @nome_console.setter
+    def nome_console(self, nome):
+        if nome == '':
+            raise ValueError('Deve ser informado o nome do console.')
+        self.__nome_console = nome
+        
+        
+            
+
+
+class JogoMobile(Jogo):
+    def __init__(self, titulo, genero, plataforma):
+        super().__init__(titulo, genero, plataforma = 'Mobile')
 
 class StatusJogo(Enum):
     NAO_INICIADO = "NÃO INICIADO"
