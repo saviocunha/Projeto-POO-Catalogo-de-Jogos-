@@ -1,13 +1,6 @@
 from datetime import date
-from enum import Enum
 
-
-# Define os status possiveis dos jogos
-class StatusJogo(Enum):
-    NAO_INICIADO = "NÃO INICIADO"
-    JOGANDO = "JOGANDO"
-    FINALIZADO = "FINALIZADO"
-
+from statusjogo import StatusJogo
 
 
 # --------------- Classe Base --------------- 
@@ -62,6 +55,7 @@ class Jogo:
         return self.__horas_jogadas
     
     # OBS.: Não foi definido setter para o atributo __horas_jogadas.
+    # Consultar a função adicionar_horas na seção "Regras de Negócio"
       
     @property
     def status(self):
@@ -125,9 +119,9 @@ class Jogo:
     
     def reiniciar(self):
         self.__horas_jogadas = 0
-        self.__nota = 0
+        self.__nota = None
         self.__status = StatusJogo.JOGANDO
-        self.__data_inicio = date.toda()
+        self.__data_inicio = date.today()
         self.__data_fim = None
     
     def avaliar(self, valor = float):
@@ -142,8 +136,12 @@ class Jogo:
 #  --------------- Métodos Especiais  ---------------        
 
     def __str__(self):
-        return (f'{self.titulo} - Plataforma: {self.plataforma}  - Status: {self.status.value}')
+        return (f'{self.titulo} - {self.plataforma}')
     
+    def __repr__(self):
+        return (f' Jogo (Título = {self.titulo}, Plataforma = {self.plataforma}, Horas = {self.horas_jogadas}, Status = {self.status.name}, Nota = {self.nota})')
+
+
     def __eq__(self, valor):
         return isinstance(valor, Jogo) and \
                 self.titulo.lower() == valor.titulo.lower() and \
@@ -153,11 +151,12 @@ class Jogo:
     def __lt__(self, valor):
         return self.horas_jogadas < valor.horas_jogadas
 
+   
 
 # --------------- Classes Filhas --------------- 
 class JogoPc(Jogo):
     def __init__(self, titulo, genero):
-        super().__init__(titulo, genero, plataforma= 'PC')   
+        super().__init__(titulo, genero, plataforma = 'PC')   
 
 class JogoConsole(Jogo):
     def __init__(self, titulo, genero, nome_console):
@@ -179,7 +178,6 @@ class JogoConsole(Jogo):
 class JogoMobile(Jogo):
     def __init__(self, titulo, genero):
         super().__init__(titulo, genero, plataforma = 'Mobile')
-
 
 
 
