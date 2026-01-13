@@ -3,8 +3,19 @@ from jogo import Jogo
 class Colecao:
     def __init__(self, nome: str):
         self.nome = nome
-        self.jogos = []
+        self.__jogos = []
+   
+    @property
+    def nome(self):
+        self.__nome = nome
 
+    @nome.setter
+    def nome(self, value)   :
+        if value == None or value.strip()=='':
+            raise ValueError('O nome não pode ser vazio.')
+        self.__nome = value
+
+    
     @property
     def jogos(self):
         return self.__jogos.copy()
