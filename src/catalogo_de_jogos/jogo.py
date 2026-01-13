@@ -93,7 +93,7 @@ class Jogo:
             raise ValueError('Só é possivel avaliar jogos finalizados! ')
         if not (0 <= value <= 10):
             raise ValueError('Nota deve ser de 0 a 10.')
-        self.__nota = valor
+        self.__nota = value
 
 
 #  --------------- Regras de Negócio  --------------- 
@@ -123,13 +123,8 @@ class Jogo:
         self.__data_inicio = None
         self.__data_fim = None
     
-    def avaliar(self, value = float):
-        if self.__status != StatusJogo.FINALIZADO:
-            raise ValueError('Só é possivel avalizar jogos finalizados.')
-        
-        if not(0 <= value <= 10):
-            raise ValueError('Nota deve estar entre 0 e 10')
-        self.__nota = value
+    def avaliar(self, value: float): # Utiliza o setter para validar a nota
+        self.nota = value
 
 
 #  --------------- Métodos Especiais  ---------------        
