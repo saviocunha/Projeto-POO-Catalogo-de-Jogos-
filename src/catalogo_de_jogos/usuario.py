@@ -5,8 +5,8 @@ from jogo import Jogo
 class Usuario:
     def __init__(self, nome):
         self.nome = nome
-        self.catalogo = Colecao('Catálogo Principal')
-        self.colecoes = []
+        self.__catalogo = Colecao('Catálogo Principal')
+        self.__colecoes = []
 
 
     @property
@@ -15,7 +15,7 @@ class Usuario:
 
     @nome.setter
     def nome(self, nome):
-        if nome == '':
+        if nome == None or nome.strip() == '':
             raise ValueError('O nome do usuário não pode ser vazio.')
         self.__nome = nome
 
