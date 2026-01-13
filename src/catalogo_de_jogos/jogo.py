@@ -7,10 +7,11 @@ from statusjogo import StatusJogo
 
 class Jogo:
     def __init__(self, titulo: str, genero:str, plataforma: str):
-        self.__titulo = titulo
-        self.__genero = genero
-        self.__plataforma = plataforma
-
+        # Atributos que são validados via setter 
+        self.titulo = titulo
+        self.genero = genero
+        self.plataforma = plataforma
+        # Atributos de Estado Interno --> Não foram criados setters
         self.__horas_jogadas = 0.0
         self.__status = StatusJogo.NAO_INICIADO
         self.__data_inicio = None
@@ -27,10 +28,10 @@ class Jogo:
         return self.__titulo
 
     @titulo.setter
-    def titulo(self, titulo):
-        if titulo == '':
+    def titulo(self,value):
+        if value == None or value.strip() == '':
             raise ValueError('O título não pode ser vazio!')
-        self.__titulo = titulo
+        self.__titulo = value.strip()
         
 
     @property
@@ -38,16 +39,20 @@ class Jogo:
         return self.__genero
 
     @genero.setter
-    def genero(self, genero):
-        self.__genero = genero
+    def genero(self, value):
+        if value == None or value.strip() == '':
+            raise ValueError('O gênero do jogo não pode ser vazio.')
+        self.__genero = value.strip()
     
     @property
     def plataforma(self):
         return self.__plataforma
     
     @plataforma.setter
-    def plataforma(self, plataforma):
-        self.__plataforma = plataforma
+    def plataforma(self, value):
+        if value == None or value.strip() == '':
+            raise ValueError('Plataforma não pode ser vazia.')
+        self.__plataforma = value.strip()
     
 
     @property
@@ -72,27 +77,21 @@ class Jogo:
     def data_inicio(self):
         return self.__data_inicio
     
-    @data_inicio.setter
-    def data_inicio(self, data):
-        self.__data_inicio = data
     
     @property
     def data_fim(self):
         return self.__data_fim
     
-    @data_fim.setter
-    def data_fim(self, data):
-        self.__data_fim = data
-
+   
     @property
     def nota(self):
         return self.__nota
     
     @nota.setter
-    def nota(self, valor):
-        if self.status != StatusJogo.FINALIZADO:
+    def nota(self, value):
+        if self.__status != StatusJogo.FINALIZADO:
             raise ValueError('Só é possivel avaliar jogos finalizados! ')
-        if not (0 <= valor <= 10):
+        if not (0 <= value <= 10):
             raise ValueError('Nota deve ser de 0 a 10.')
         self.__nota = valor
 
@@ -112,25 +111,25 @@ class Jogo:
 
     def finalizar(self):
         if self.__horas_jogadas < 1:
-            raise ValueError('Não é possivel finalizar com menos de 1 h de jogada. ')
+            raise ValueError('Não é possivel finalizar o jogo sem horas jogadas. ')
         
         self.__status = StatusJogo.FINALIZADO
         self.__data_fim = date.today()
     
     def reiniciar(self):
-        self.__horas_jogadas = 0
+        self.__status = StatusJogo.NAO_INICIADO
+        self.__horas_jogadas = 0.0
         self.__nota = None
-        self.__status = StatusJogo.JOGANDO
-        self.__data_inicio = date.today()
+        self.__data_inicio = None
         self.__data_fim = None
     
-    def avaliar(self, valor = float):
+    def avaliar(self, value = float):
         if self.__status != StatusJogo.FINALIZADO:
             raise ValueError('Só é possivel avalizar jogos finalizados.')
         
-        if not(0 <= valor <= 10):
+        if not(0 <= value <= 10):
             raise ValueError('Nota deve estar entre 0 e 10')
-        self.__nota = valor
+        self.__nota = value
 
 
 #  --------------- Métodos Especiais  ---------------        
@@ -142,14 +141,14 @@ class Jogo:
         return (f' Jogo (Título = {self.titulo}, Plataforma = {self.plataforma}, Horas = {self.horas_jogadas}, Status = {self.status.name}, Nota = {self.nota})')
 
 
-    def __eq__(self, valor):
-        return isinstance(valor, Jogo) and \
-                self.titulo.lower() == valor.titulo.lower() and \
-                self.plataforma == valor.plataforma
+    def __eq__(self, value):
+        return isinstance(value, Jogo) and \
+                self.titulo.lower() == value.titulo.lower() and \
+                self.plataforma == value.plataforma
 
 
-    def __lt__(self, valor):
-        return self.horas_jogadas < valor.horas_jogadas
+    def __lt__(self, value):
+        return self.horas_jogadas < value.horas_jogadas
 
    
 
@@ -161,7 +160,7 @@ class JogoPc(Jogo):
 class JogoConsole(Jogo):
     def __init__(self, titulo, genero, nome_console):
         super().__init__(titulo, genero, plataforma = 'Console')
-        self.__nome_console = nome_console
+        self.nome_console = nome_console
     
 
     @property
@@ -170,7 +169,7 @@ class JogoConsole(Jogo):
     
     @nome_console.setter
     def nome_console(self, nome):
-        if nome == '':
+        if nome == None or nome.strip() == '':
             raise ValueError('Deve ser informado o nome do console.')
         self.__nome_console = nome
    

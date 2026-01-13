@@ -2,8 +2,8 @@ from jogo import Jogo
 
 class Colecao:
     def __init__(self, nome: str):
-        self.__nome = nome
-        self.__jogos = []
+        self.nome = nome
+        self.jogos = []
 
     @property
     def jogos(self):

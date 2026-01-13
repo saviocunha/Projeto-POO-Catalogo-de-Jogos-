@@ -4,9 +4,9 @@ from jogo import Jogo
 
 class Usuario:
     def __init__(self, nome):
-        self.__nome = nome
-        self.__catalogo = Colecao('Catálogo Principal')
-        self.__colecoes = []
+        self.nome = nome
+        self.catalogo = Colecao('Catálogo Principal')
+        self.colecoes = []
 
 
     @property
