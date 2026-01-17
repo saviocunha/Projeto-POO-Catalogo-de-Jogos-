@@ -1,4 +1,4 @@
-from jogo import Jogo
+from .jogo import Jogo
 
 class Colecao:
     def __init__(self, nome: str):

@@ -1,9 +1,10 @@
 from datetime import date
 
-from jogo import JogoPc, JogoConsole, JogoMobile
-from statusjogo import StatusJogo
-from colecao import Colecao
-from usuario import Usuario
+from .jogo import JogoPc, JogoConsole, JogoMobile
+from .statusjogo import StatusJogo
+from .colecao import Colecao
+from .usuario import Usuario
+
 
 
 

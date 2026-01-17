@@ -1,6 +1,7 @@
 import pytest
-from jogo import Jogo, JogoPc, JogoConsole, JogoMobile, StatusJogo
 
+from catalogo_de_jogos.jogo import Jogo, JogoPc, JogoConsole, JogoMobile
+from catalogo_de_jogos.statusjogo import StatusJogo
 
 # =========================
 # Testes da classe Jogo
