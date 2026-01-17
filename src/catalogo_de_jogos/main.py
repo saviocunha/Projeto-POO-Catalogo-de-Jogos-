@@ -1,38 +1,25 @@
-from datetime import date
 
-from .jogo import JogoPc, JogoConsole, JogoMobile
-from .statusjogo import StatusJogo
-from .colecao import Colecao
-from .usuario import Usuario
-
-
+from catalogo_de_jogos.dados import carregar_usuarios, salvar_usuarios
+from catalogo_de_jogos.cli import executar_sistema
 
 
 def main():
-    # Criar usuário
-    usuario = Usuario("Sávio")
-    print(usuario)
+    # 1️⃣ Carregar dados persistidos
+    try:
+        usuarios = carregar_usuarios()
+        print("Dados carregados com sucesso.")
+    except FileNotFoundError:
+        usuarios = []
+        print("Nenhum dado encontrado. Iniciando sistema vazio.")
 
-    # Criar jogo
-    jogo = JogoPc("Hades", "Roguelike")
-    print(jogo)
+    # 2️⃣ Executar interface em linha de comando
+    executar_sistema(usuarios)
 
-    # Adicionar jogo ao catálogo
-    usuario.adicionar_jogo(jogo)
-    print(f"Jogos no catálogo: {len(usuario.catalogo.jogos)}")
-
-    # Adicionar horas
-    jogo.adicionar_horas(5)
-    print(f"Horas jogadas: {jogo.horas_jogadas}")
-    print(f"Status: {jogo.status.name}")
-
-    # Finalizar e avaliar
-    jogo.finalizar()
-    jogo.avaliar(9)
-    print(f"Nota: {jogo.nota}")
+    # 3️⃣ Salvar dados antes de encerrar
+    salvar_usuarios(usuarios)
+    print("Dados salvos com sucesso.")
 
 
 if __name__ == "__main__":
     main()
-
 

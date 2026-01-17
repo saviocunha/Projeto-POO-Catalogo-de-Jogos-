@@ -1,6 +1,6 @@
 from datetime import date
 
-from .statusjogo import StatusJogo
+from catalogo_de_jogos.statusjogo import StatusJogo
 
 
 # --------------- Classe Base --------------- 

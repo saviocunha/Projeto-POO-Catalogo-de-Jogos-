@@ -1,6 +1,6 @@
 from .colecao import Colecao
 
-from .jogo import Jogo
+from catalogo_de_jogos.jogo import Jogo
 
 class Usuario:
     def __init__(self, nome):
