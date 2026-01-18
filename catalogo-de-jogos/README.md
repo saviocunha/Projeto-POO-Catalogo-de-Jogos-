@@ -98,14 +98,14 @@ poetry install
 ```
 
 ### 2. Executar a Aplicação
-Para iniciar a interface de linha de comando (CLI):
+Para iniciar a interface de linha de comando (CLI) dentro da pasta src execute:
 
 ```bash
 poetry run python -m catalogo_de_jogos.main
 ```
 
 ### 3. Executar Testes
-Para rodar a suíte de testes automatizados:
+Para rodar a suíte de testes automatizados dentro da pasta tests execute:
 
 ```bash
 poetry run pytest
