@@ -1,0 +1,47 @@
+{
+    "usuarios": [
+        {
+            "nome": "Savio",
+            "jogos": [
+                {
+                    "tipo": "PC",
+                    "titulo": "Teste 2",
+                    "genero": "Teste 2",
+                    "plataforma": "PC",
+                    "horas_jogadas": 0.0,
+                    "status": "NAO_INICIADO",
+                    "nota": null,
+                    "data_inicio": null,
+                    "data_fim": null
+                }
+            ]
+        },
+        {
+            "nome": "Gaby",
+            "jogos": [
+                {
+                    "tipo": "PC",
+                    "titulo": "Teste",
+                    "genero": "teste",
+                    "plataforma": "PC",
+                    "horas_jogadas": 5.0,
+                    "status": "FINALIZADO",
+                    "nota": 8.0,
+                    "data_inicio": "2026-01-17",
+                    "data_fim": "2026-01-17"
+                },
+                {
+                    "tipo": "PC",
+                    "titulo": "Teste 3",
+                    "genero": "Teste 3",
+                    "plataforma": "PC",
+                    "horas_jogadas": 0.0,
+                    "status": "NAO_INICIADO",
+                    "nota": null,
+                    "data_inicio": null,
+                    "data_fim": null
+                }
+            ]
+        }
+    ]
+}

@@ -18,8 +18,6 @@ O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários r
 
 -   Herança Simples: especialização da classe Jogo em diferentes plataformas.
 
--   Herança Múltipla: a classe Jogo herda comportamentos de Avaliável e Temporizável.
-
 -   Polimorfismo: comportamentos específicos de acordo com o tipo de jogo.
 
 -   Métodos Especiais: utilizados para exibição, comparação e organização dos objetos
@@ -43,16 +41,13 @@ O sistema Catálogo de Jogos Digitais tem como objetivo permitir que usuários r
     A classe Colecao é responsável por agrupar listas personalizadas de jogos.
 
 5. Classe Usuario: 
-    Representa o usuário do sistema. Um usuário pode possuir um catálogo de jogos e gerenciá-lo, além de diversas coleções personalizadas.
-
--   Atributos:nome;  tipo_de_jogador (casual, competitivo, hardcore, etc); tempo_total_jogado; lista_de_jogos
--   Métodos: adicionar_jogo(); remover_jogo(); listar_jogos(); calcular_tempo_total_jogado(); gerar_relatorio_pessoal()
+Representa o usuário do sistema. Pode possuir um catálogo de jogos e diversas coleções personalizadas.
+- **Atributos**: nome, tipo_de_jogador, tempo_total_jogado, lista_de_jogos.
+- **Métodos**: `adicionar_jogo()`, `remover_jogo()`, `listar_jogos()`, `calcular_tempo_total_jogado()`, `gerar_relatorio_pessoal()`.
 
 6. Classe Relatorio: 
-    Responsável por gerar estatísticas e informações consolidadas do catálogo, como total de horas jogadas, percentual de jogos por status e lista dos jogos mais jogados.
+    Responsável por gerar estatísticas e informações consolidadas do catálogo.
 
-7. Classe Configuracoes: 
-   Gerenciar as configurações do usuário (meta anual, gêneros favoritos, limite de jogos simultâneos) lidas e salvas no settings.json.
    
 ------------------------------------------------------------------------
 
@@ -88,7 +83,30 @@ Estratégias para a execução do projeto
 
 ## 📌 Requisitos
 
--   Python **3.10+**\
--   Nenhuma dependência externa
+- Python **3.10+**
+- Gerenciador de dependências **Poetry**
 
-------------------------------------------------------------------------
+## 🚀 Instalação e Execução
+
+Este projeto utiliza o [Poetry](https://python-poetry.org/) para gerenciamento de dependências.
+
+### 1. Instalar Dependências
+Na raiz do projeto, execute:
+
+```bash
+poetry install
+```
+
+### 2. Executar a Aplicação
+Para iniciar a interface de linha de comando (CLI):
+
+```bash
+poetry run python -m catalogo_de_jogos.main
+```
+
+### 3. Executar Testes
+Para rodar a suíte de testes automatizados:
+
+```bash
+poetry run pytest
+```
