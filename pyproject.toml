@@ -1,3 +1,0 @@
-[tool.pytest.ini_options]
-testpaths = [src/tests]
-pythonpath = [src/catalogo_de_jogos]

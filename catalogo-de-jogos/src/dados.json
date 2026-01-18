@@ -1,0 +1,20 @@
+{
+    "usuarios": [
+        {
+            "nome": "Savio",
+            "jogos": [
+                {
+                    "tipo": "Console",
+                    "titulo": "Castlevânia IV",
+                    "genero": "Plataforma",
+                    "plataforma": "Console",
+                    "horas_jogadas": 0.0,
+                    "status": "NAO_INICIADO",
+                    "nota": null,
+                    "data_inicio": null,
+                    "data_fim": null
+                }
+            ]
+        }
+    ]
+}
